@@ -1,8 +1,8 @@
 /*
-*	grupo  :
-*	alumno :
-*	n.exp. :
-*	fecha  :
+*	grupo  :	GDAM21
+*	alumno :	Lucía González Carmona
+*	n.exp. :	7253
+*	fecha  :	09/06/2022
  */
 package Cheese;
 
