@@ -50,6 +50,10 @@ public class ListaProductos {
         if ((campo.replace(" ","").isEmpty()) || (campo == null))  return true; else return false;
     }
 
+    /**
+     * Constructor de la clase
+     * @param nombre : nombre de la lista de productos 
+     */
     public ListaProductos(String nombre) {
     	if (parametro_vacio(nombre)) {
     		this.nombreLista = "noNamed";
@@ -58,10 +62,20 @@ public class ListaProductos {
     	this.nombreLista = nombre;
     	}
     }
+    
+    /**
+     * Obtiene el número total de productos
+     * @return número de productos de esta clase
+     */
     public int totalProductos(){
             return this.getNumProductos();
     }
-        
+     
+    /**
+     * Añade un objeto producto a la lista
+     * @param prod objeto Producto que queremos añadir
+     * @return null si la lista contiene el mismo código del producto que queremos añadir. Si no devuelve el producto añadido
+     */
     public Producto registraProducto(Producto prod) {
         
         if (listaP.containsKey(prod.getcode())) {
@@ -73,6 +87,11 @@ public class ListaProductos {
         return prod;
     }
 
+    /**
+     * Elimina un producto
+     * @param codigo : código identificador del producto a eliminar
+     * @return prod Producto eliminado
+     */
     public Producto descartaProducto(String codigo) { 
         
         Producto prod = encuentraProducto(codigo);
@@ -84,6 +103,11 @@ public class ListaProductos {
         return prod;
     }
 
+    /**
+     * Busca un producto por su código
+     * @param codigo : código identificador del producto buscado
+     * @return prod Producto nulo si la lista no contiene el código. Si no devuelve el código
+     */
     public Producto encuentraProducto(String codigo) { 
         Producto prod = null;
         
